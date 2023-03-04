@@ -1,0 +1,30 @@
+CREATE DATABASE gogloe;
+CREATE TABLE Employee (
+    EmpID INT PRIMARY KEY,
+    EmpName VARCHAR(30),
+    EmpAge INT,
+    EmpAddress VARCHAR(25),
+    EmpSalary INT
+);
+INSERT INTO Employee
+VALUES (101, 'Abhijeet', 19, 'Bambolim', 50000),
+       (102, 'Aaron', 19, 'Panjim', 50000),
+       (103, 'David', 19, 'Fatorda', 50000),
+       (104, 'Adam', 19, 'Margao', 45000),
+       (105, 'Aakash', 20, 'Birla', 40000),
+       (106, 'Sharv', 19, 'Vasco', 45000),
+       (107, 'Nathan', 19, 'Margao', 40000);
+SELECT * FROM Employee;
+UPDATE Employee SET EmpSalary = 60000 WHERE EmpID = 101;
+ALTER TABLE Employee ADD EmpQualification varchar(30);
+UPDATE Employee SET EmpQualification = 'B.E.' WHERE EmpID = 101;
+UPDATE Employee SET EmpQualification = 'B.E.' WHERE EmpID = 102;
+UPDATE Employee SET EmpQualification = 'B.E.' WHERE EmpID = 103;
+UPDATE Employee SET EmpQualification = 'B.E.' WHERE EmpID = 104;
+UPDATE Employee SET EmpQualification = 'B.E.' WHERE EmpID = 105;
+UPDATE Employee SET EmpQualification = 'B.E.' WHERE EmpID = 106;
+UPDATE Employee SET EmpQualification = 'B.E.' WHERE EmpID = 107;
+DELETE FROM Employee WHERE EmpID = 107;
+ALTER TABLE Employee MODIFY EmpAddress VARCHAR(50);
+TRUNCATE TABLE Employee;
+DROP TABLE Employee;
